@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/downloaded_Files">
+        <file>files/youtube-dl.exe</file>
+    </qresource>
+</RCC>
