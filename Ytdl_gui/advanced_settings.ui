@@ -42,7 +42,7 @@
     <string>type in a normal ytdl command (include youtube-dl at the beginning)</string>
    </property>
    <property name="text">
-    <string>custom commands</string>
+    <string>custom commands here</string>
    </property>
   </widget>
  </widget>

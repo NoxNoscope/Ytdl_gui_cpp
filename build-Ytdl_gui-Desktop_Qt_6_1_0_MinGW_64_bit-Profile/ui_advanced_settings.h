@@ -50,7 +50,7 @@ public:
 #if QT_CONFIG(tooltip)
         lineEdit->setToolTip(QCoreApplication::translate("advanced_settings", "type in a normal ytdl command (include youtube-dl at the beginning)", nullptr));
 #endif // QT_CONFIG(tooltip)
-        lineEdit->setText(QCoreApplication::translate("advanced_settings", "custom commands", nullptr));
+        lineEdit->setText(QCoreApplication::translate("advanced_settings", "custom commands here", nullptr));
     } // retranslateUi
 
 };
