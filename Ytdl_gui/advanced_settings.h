@@ -18,6 +18,12 @@ public:
 private slots:
     void on_pushButton_updateYTDL_clicked();
 
+    void on_lineEdit_customCommand_returnPressed();
+
+    void on_pushButton_runCmd_clicked();
+
+    QString runCMD();
+
 private:
     Ui::advanced_settings *ui;
 };

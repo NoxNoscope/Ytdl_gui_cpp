@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/downloaded_Files">
         <file>files/youtube-dl.exe</file>
+        <file>files/file_download_grey_48x48.png</file>
     </qresource>
 </RCC>

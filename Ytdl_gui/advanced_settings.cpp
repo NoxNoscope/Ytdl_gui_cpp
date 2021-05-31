@@ -24,3 +24,23 @@ void advanced_settings::on_pushButton_updateYTDL_clicked()
     QFuture<void> future = QtConcurrent::run(updateCMD);
 }
 
+QString advanced_settings::runCMD(){
+    QString p = ui->lineEdit_customCommand->text();
+    return p;
+}
+
+void runCMDd(QString yeh){
+    system(yeh.toUtf8().constData());
+}
+
+void advanced_settings::on_lineEdit_customCommand_returnPressed()
+{
+    QFuture<void> future = QtConcurrent::run(runCMDd, advanced_settings::runCMD());
+
+}
+
+void advanced_settings::on_pushButton_runCmd_clicked()
+{
+    QFuture<void> future = QtConcurrent::run(runCMDd, advanced_settings::runCMD());
+}
+

@@ -23,6 +23,12 @@ private slots:
     void on_pushButton_copyCMD_clicked();
 
     QString createCommand();
+    void on_lineEdit_returnPressed();
+
+    void on_pushButton_2_clicked();
+
+    void on_lineEdit_savelocation_textChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
 };

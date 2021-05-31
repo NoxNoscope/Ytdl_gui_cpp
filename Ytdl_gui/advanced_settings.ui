@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>939</width>
+    <height>463</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,12 +29,12 @@
     <string>UpdateYTDL</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEdit_customCommand">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>341</width>
+     <width>371</width>
      <height>21</height>
     </rect>
    </property>
@@ -42,7 +42,20 @@
     <string>type in a normal ytdl command (include youtube-dl at the beginning)</string>
    </property>
    <property name="text">
-    <string>custom commands here</string>
+    <string>youtube-dl custom commands here</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_runCmd">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>0</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RUN</string>
    </property>
   </widget>
  </widget>
