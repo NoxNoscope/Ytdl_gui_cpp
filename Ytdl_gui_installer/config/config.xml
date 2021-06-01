@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>YoutubeDownloader</Name>
+    <Version>1.0.0</Version>
+    <Title>Youtube Downloader</Title>
+    <Publisher>Diego</Publisher>
+    <StartMenuDir>YoutubeDownloader</StartMenuDir>
+    <TargetDir>@HomeDir@/YoutubeDownloader</TargetDir>
+</Installer>
