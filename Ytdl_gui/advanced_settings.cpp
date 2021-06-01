@@ -51,3 +51,10 @@ void advanced_settings::on_pushButton_CustomCommand_clicked()
     QDesktopServices::openUrl(QUrl("https://github.com/ytdl-org/youtube-dl/blob/master/README.md#options"));
 }
 
+
+void advanced_settings::on_pushButton_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/NoxNoscope/Ytdl_gui_cpp"));
+
+}
+

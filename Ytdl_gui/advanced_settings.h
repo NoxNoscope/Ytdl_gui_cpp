@@ -26,6 +26,8 @@ private slots:
 
     void on_pushButton_CustomCommand_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::advanced_settings *ui;
 };
