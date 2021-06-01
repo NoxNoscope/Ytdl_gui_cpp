@@ -69,7 +69,7 @@ QString MainWindow::createCommand(){
 
     //system("youtube-dl -f bestvideo+bestaudio/best -o /downloaded_Files/%(title)s_(%(height)sp).%(ext)s https://www.youtube.com/watch?v=QtY0tCv5ywk");
     //QString cmd = "youtube-dl -f best -o %userprofile%/Desktop/%(title)s_(%(height)sp).%(ext)s " + video;
-    QString cmd = "youtube-dl " + settings + " -o " + saveLocation + "/%(title)s_(%(height)sp).%(ext)s " + video;
+    QString cmd = "youtube-dl " + settings + "-o " + saveLocation + "/%(title)s_(%(height)sp).%(ext)s " + video;
 
 
     return cmd;
