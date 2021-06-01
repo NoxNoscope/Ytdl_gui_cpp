@@ -52,16 +52,20 @@ QString MainWindow::createCommand(){
     file.close();
     QString video = ui->lineEdit->text();
     QString settings = "";
+    bool checkBox_best = ui->checkBox_best->checkState();
+    bool checkBox_audioOnly = ui->checkBox_audioOnly->checkState();
 
-    bool checkstate = ui->checkBox_best->checkState();
-    if(checkstate == true)
+
+    if(checkBox_best == true)
     {
-        settings = settings + "-f best ";
+        if(checkBox_audioOnly == false)
+        {
+            settings = settings + "-f best ";
+        }
     }
 
 
-    checkstate = ui->checkBox_audioOnly->checkState();
-    if(checkstate == true)
+    if(checkBox_audioOnly == true)
     {
         settings = settings + "--extract-audio --audio-format mp3 ";
     }
