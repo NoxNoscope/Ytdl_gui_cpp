@@ -24,6 +24,8 @@ private slots:
 
     QString runCMD();
 
+    void on_pushButton_CustomCommand_clicked();
+
 private:
     Ui::advanced_settings *ui;
 };

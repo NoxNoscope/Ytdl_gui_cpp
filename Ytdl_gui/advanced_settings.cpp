@@ -1,6 +1,7 @@
 #include "advanced_settings.h"
 #include "ui_advanced_settings.h"
 #include <QtConcurrent/QtConcurrent>
+#include <QDesktopServices>
 
 advanced_settings::advanced_settings(QWidget *parent) :
     QWidget(parent),
@@ -42,5 +43,11 @@ void advanced_settings::on_lineEdit_customCommand_returnPressed()
 void advanced_settings::on_pushButton_runCmd_clicked()
 {
     QFuture<void> future = QtConcurrent::run(runCMDd, advanced_settings::runCMD());
+}
+
+
+void advanced_settings::on_pushButton_CustomCommand_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/ytdl-org/youtube-dl/blob/master/README.md#options"));
 }
 

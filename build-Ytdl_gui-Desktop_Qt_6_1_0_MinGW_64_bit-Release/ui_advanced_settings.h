@@ -23,6 +23,7 @@ public:
     QPushButton *pushButton_updateYTDL;
     QLineEdit *lineEdit_customCommand;
     QPushButton *pushButton_runCmd;
+    QPushButton *pushButton_CustomCommand;
 
     void setupUi(QWidget *advanced_settings)
     {
@@ -38,6 +39,9 @@ public:
         pushButton_runCmd = new QPushButton(advanced_settings);
         pushButton_runCmd->setObjectName(QString::fromUtf8("pushButton_runCmd"));
         pushButton_runCmd->setGeometry(QRect(370, 0, 31, 21));
+        pushButton_CustomCommand = new QPushButton(advanced_settings);
+        pushButton_CustomCommand->setObjectName(QString::fromUtf8("pushButton_CustomCommand"));
+        pushButton_CustomCommand->setGeometry(QRect(70, 20, 161, 31));
 
         retranslateUi(advanced_settings);
 
@@ -54,8 +58,12 @@ public:
 #if QT_CONFIG(tooltip)
         lineEdit_customCommand->setToolTip(QCoreApplication::translate("advanced_settings", "type in a normal ytdl command (include youtube-dl at the beginning)", nullptr));
 #endif // QT_CONFIG(tooltip)
-        lineEdit_customCommand->setText(QCoreApplication::translate("advanced_settings", "youtube-dl custom commands here", nullptr));
+        lineEdit_customCommand->setText(QCoreApplication::translate("advanced_settings", "youtube-dl [Options] [URL]", nullptr));
         pushButton_runCmd->setText(QCoreApplication::translate("advanced_settings", "RUN", nullptr));
+#if QT_CONFIG(tooltip)
+        pushButton_CustomCommand->setToolTip(QCoreApplication::translate("advanced_settings", "will only update the downloading part itself (usefull if it doesnt work anymore)", nullptr));
+#endif // QT_CONFIG(tooltip)
+        pushButton_CustomCommand->setText(QCoreApplication::translate("advanced_settings", "Custom Command Options", nullptr));
     } // retranslateUi
 
 };

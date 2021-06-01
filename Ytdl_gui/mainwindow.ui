@@ -1021,7 +1021,7 @@ QSizeGrip
      <rect>
       <x>10</x>
       <y>110</y>
-      <width>111</width>
+      <width>131</width>
       <height>41</height>
      </rect>
     </property>
@@ -1034,7 +1034,7 @@ QSizeGrip
      <bool>false</bool>
     </property>
     <property name="text">
-     <string>extra settings</string>
+     <string>Advanced settings</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
@@ -1058,7 +1058,7 @@ QSizeGrip
    <widget class="QPushButton" name="pushButton_copyCMD">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>150</x>
       <y>110</y>
       <width>141</width>
       <height>41</height>
@@ -1083,7 +1083,7 @@ QSizeGrip
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>10</y>
+      <y>20</y>
       <width>401</width>
       <height>31</height>
      </rect>
@@ -1094,7 +1094,7 @@ QSizeGrip
      </font>
     </property>
     <property name="text">
-     <string>wtgeghhj</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -1152,39 +1152,6 @@ QSizeGrip
      <string>Audio Only</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>50</y>
-      <width>141</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>MB   Max Video Size</string>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="spinBox_MaxVideoSize">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>50</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="lineEdit_savelocation">
     <property name="geometry">
      <rect>
@@ -1217,6 +1184,11 @@ QSizeGrip
     </rect>
    </property>
   </widget>
+  <action name="actionhelp">
+   <property name="text">
+    <string>help</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

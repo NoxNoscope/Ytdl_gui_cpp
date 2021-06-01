@@ -10,14 +10,13 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,6 +24,7 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionhelp;
     QWidget *centralwidget;
     QPushButton *pushButton_extra_settings;
     QPushButton *pushButton_2;
@@ -33,8 +33,6 @@ public:
     QPushButton *pushButton;
     QCheckBox *checkBox_best;
     QCheckBox *checkBox_audioOnly;
-    QLabel *label;
-    QSpinBox *spinBox_MaxVideoSize;
     QLineEdit *lineEdit_savelocation;
     QMenuBar *menubar;
 
@@ -1054,11 +1052,13 @@ public:
 "\n"
 "}\n"
 ""));
+        actionhelp = new QAction(MainWindow);
+        actionhelp->setObjectName(QString::fromUtf8("actionhelp"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         pushButton_extra_settings = new QPushButton(centralwidget);
         pushButton_extra_settings->setObjectName(QString::fromUtf8("pushButton_extra_settings"));
-        pushButton_extra_settings->setGeometry(QRect(10, 110, 111, 41));
+        pushButton_extra_settings->setGeometry(QRect(10, 110, 131, 41));
         QFont font;
         font.setPointSize(11);
         pushButton_extra_settings->setFont(font);
@@ -1069,12 +1069,12 @@ public:
         pushButton_2->setFont(font);
         pushButton_copyCMD = new QPushButton(centralwidget);
         pushButton_copyCMD->setObjectName(QString::fromUtf8("pushButton_copyCMD"));
-        pushButton_copyCMD->setGeometry(QRect(130, 110, 141, 41));
+        pushButton_copyCMD->setGeometry(QRect(150, 110, 141, 41));
         pushButton_copyCMD->setFont(font);
         pushButton_copyCMD->setStyleSheet(QString::fromUtf8(""));
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(0, 10, 401, 31));
+        lineEdit->setGeometry(QRect(0, 20, 401, 31));
         lineEdit->setFont(font);
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
@@ -1088,14 +1088,6 @@ public:
         checkBox_audioOnly->setObjectName(QString::fromUtf8("checkBox_audioOnly"));
         checkBox_audioOnly->setGeometry(QRect(70, 50, 101, 41));
         checkBox_audioOnly->setFont(font);
-        label = new QLabel(centralwidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(260, 50, 141, 41));
-        label->setFont(font);
-        spinBox_MaxVideoSize = new QSpinBox(centralwidget);
-        spinBox_MaxVideoSize->setObjectName(QString::fromUtf8("spinBox_MaxVideoSize"));
-        spinBox_MaxVideoSize->setGeometry(QRect(170, 50, 81, 41));
-        spinBox_MaxVideoSize->setFont(font);
         lineEdit_savelocation = new QLineEdit(centralwidget);
         lineEdit_savelocation->setObjectName(QString::fromUtf8("lineEdit_savelocation"));
         lineEdit_savelocation->setGeometry(QRect(0, 160, 401, 31));
@@ -1115,17 +1107,17 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton_extra_settings->setText(QCoreApplication::translate("MainWindow", "extra settings", nullptr));
+        actionhelp->setText(QCoreApplication::translate("MainWindow", "help", nullptr));
+        pushButton_extra_settings->setText(QCoreApplication::translate("MainWindow", "Advanced settings", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "pick", nullptr));
 #if QT_CONFIG(tooltip)
         pushButton_copyCMD->setToolTip(QCoreApplication::translate("MainWindow", "to get the raw command it runs, could be used for creating custom commands", nullptr));
 #endif // QT_CONFIG(tooltip)
         pushButton_copyCMD->setText(QCoreApplication::translate("MainWindow", "copy ytdl command", nullptr));
-        lineEdit->setText(QCoreApplication::translate("MainWindow", "wtgeghhj", nullptr));
+        lineEdit->setText(QString());
         pushButton->setText(QString());
         checkBox_best->setText(QCoreApplication::translate("MainWindow", "Best", nullptr));
         checkBox_audioOnly->setText(QCoreApplication::translate("MainWindow", "Audio Only", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "MB   Max Video Size", nullptr));
         lineEdit_savelocation->setText(QString());
     } // retranslateUi
 

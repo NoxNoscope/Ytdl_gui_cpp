@@ -8,6 +8,7 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
+#include<QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -37,6 +38,7 @@ QString text;
 
 void runCommand(QString cmd){
 
+
     system(cmd.toUtf8().constData());
 }
 
@@ -49,20 +51,15 @@ QString MainWindow::createCommand(){
     QString saveLocation = in.readAll();
     file.close();
     QString video = ui->lineEdit->text();
-
     QString settings = "";
-    bool checkstate = ui->checkBox_audioOnly->checkState();
-    int maxMB = ui->spinBox_MaxVideoSize->value();
 
+    bool checkstate = ui->checkBox_best->checkState();
     if(checkstate == true)
     {
-
-        if(maxMB == 0){
-            settings = settings + "-f best ";
-        }else{
-           settings = settings + "-f \'best[filesize<" + QString::number(maxMB) + "]\'";
-        }
+        settings = settings + "-f best ";
     }
+
+
     checkstate = ui->checkBox_audioOnly->checkState();
     if(checkstate == true)
     {
@@ -70,10 +67,11 @@ QString MainWindow::createCommand(){
     }
 
 
-
     //system("youtube-dl -f bestvideo+bestaudio/best -o /downloaded_Files/%(title)s_(%(height)sp).%(ext)s https://www.youtube.com/watch?v=QtY0tCv5ywk");
     //QString cmd = "youtube-dl -f best -o %userprofile%/Desktop/%(title)s_(%(height)sp).%(ext)s " + video;
     QString cmd = "youtube-dl " + settings + " -o " + saveLocation + "/%(title)s_(%(height)sp).%(ext)s " + video;
+
+
     return cmd;
 }
 
